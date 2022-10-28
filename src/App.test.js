@@ -15,6 +15,7 @@ describe("<App />, Review creating a React component, using JavaScript modules t
   test("[2] Luke Skywalker eventually appears in the DOM", async () => {
     render(<App />);
     expect(screen.queryByText(/Luke/i)).not.toBeInTheDocument();
+    screen.debug();
     expect(await screen.findByText(/Luke/i)).toBeInTheDocument();
   });
   test("[3] C-3PO eventually appears in the DOM", async () => {
